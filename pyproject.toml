@@ -1,0 +1,19 @@
+[project]
+name = "builddoc-ai"
+version = "0.1.0"
+description = "Construction drawing, specification and BIM consistency checking"
+requires-python = ">=3.10"
+authors = [{ name = "Muskan Suman" }]
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008"]

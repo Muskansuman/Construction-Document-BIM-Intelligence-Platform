@@ -1,0 +1,29 @@
+# --- API & core -------------------------------------------------------------
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7
+pydantic-settings>=2.3
+
+# --- Document parsing --------------------------------------------------------
+PyMuPDF>=1.24
+pdfplumber>=0.11
+pandas>=2.2
+openpyxl>=3.1
+numpy>=1.26
+
+# --- OCR (CPU build; swap for paddlepaddle-gpu on CUDA machines) -------------
+paddlepaddle>=2.6,<3.0
+paddleocr>=2.8,<3.0
+
+# --- BIM / CAD ---------------------------------------------------------------
+ifcopenshell>=0.8
+ezdxf>=1.3
+
+# --- LLM (OpenAI-compatible: OpenAI, Ollama, vLLM serving Qwen2.5) -----------
+openai>=1.40
+
+# --- Reporting & UI ----------------------------------------------------------
+reportlab>=4.2
+streamlit>=1.38
+requests>=2.32

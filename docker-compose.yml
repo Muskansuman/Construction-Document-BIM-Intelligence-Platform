@@ -1,0 +1,29 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    ports: ["8000:8000"]
+    volumes:
+      - ./data:/app/data
+      - ./outputs:/app/outputs
+      - paddle_models:/root/.paddleocr   # cache OCR model weights between runs
+
+  ui:
+    build: .
+    command: streamlit run frontend/streamlit_app.py --server.port 8501 --server.address 0.0.0.0
+    environment:
+      BUILDDOC_API_URL: http://api:8000
+    ports: ["8501:8501"]
+    depends_on: [api]
+
+  # Optional: local Qwen2.5 via Ollama. Set BUILDDOC_LLM_PROVIDER=openai and
+  # BUILDDOC_LLM_BASE_URL=http://ollama:11434/v1, then: docker compose --profile llm up
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    ports: ["11434:11434"]
+    volumes: [ollama:/root/.ollama]
+
+volumes:
+  paddle_models:
+  ollama:

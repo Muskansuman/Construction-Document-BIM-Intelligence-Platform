@@ -1,0 +1,12 @@
+STRUCTURAL SPECIFICATION - RESIDENTIAL BLOCK A
+Section 3: Concrete
+All RCC work shall use concrete grade M25 conforming to IS 456.
+Reinforcement steel shall be Fe500D TMT bars.
+Section 4: Masonry
+External walls shall be 200 mm thick solid concrete block.
+Internal partition walls: 100 mm thick.
+Section 5: Slabs
+Slab thickness: 150 mm for all floors.
+Section 6: Doors
+Main door width 1000 mm, door height 2100 mm.
+Typical floor height 3000 mm.

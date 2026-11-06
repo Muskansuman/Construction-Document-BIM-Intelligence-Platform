@@ -1,0 +1,8 @@
+# Minimal set to run the validation engine, API and tests without OCR/BIM heavy deps.
+# CI uses this; full installs use requirements.txt.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+pydantic>=2.7
+pydantic-settings>=2.3
+reportlab>=4.2
