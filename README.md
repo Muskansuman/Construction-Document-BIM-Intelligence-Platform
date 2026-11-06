@@ -1,1 +1,1 @@
-# Construction-Document-BIM-Intelligence-Platform-
+# Construction-Document-BIM-Intelligence-Platform
